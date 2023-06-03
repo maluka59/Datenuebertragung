@@ -1,0 +1,65 @@
+{
+    "QMainWindow": [
+		
+        
+    ],
+    "Qsettings": [
+        {
+            "Themesettings" :[
+                {
+                    "CustomTheme": []
+                }
+            ],
+            "Appsettings":{
+                "OrginizationName": "vorort",
+                "applicationName": "vorort",
+                "OrginizationDormain": ""
+            }
+        }
+    ],
+    "QCustomSlideMenu": [
+           
+         
+    ],
+    "QStackedWidget":[
+		{
+			"name":"stackedWidget",
+			"transitionAnimation":[
+				{
+					"fade":[
+						{
+							"active": true,
+							"duration":1000,
+							"easingCurve": "OutBack"
+						}
+					],
+					"slide":[
+						{
+							"active":true,
+							"duration": 1000,
+							"direction": "horizontal",
+							"easingCurve": "OutBack"
+						}
+					]
+				}
+			],
+			"navigation":[
+				{
+					"navigationButtons":[
+						{
+						"fallanlegen": "page1",
+						"datainputs":"page2",
+						"messung"  : "page3",
+						"diagnos" : "page4",
+						"datatransport" : "page5"
+
+
+
+						}
+					]
+				}
+			]
+	
+		}
+	]
+}

@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>817</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#upline{
+background-color: #ffaa00;
+}
+#frame{
+	background-color: rgb(255, 255, 0);
+}
+#mainframe{
+	background-color: rgb(255, 255, 255);
+}
+#fallanlegen,#datainputs,#diagnos,#messung,#datatransport,#anlegen,#qrcode,#eingabe,#messungstaste,#micro,#uploade{
+border-radius: 20px; 
+background-color: #ffffff;
+ padding: 10px 20px;
+  color: #aaffff; 
+  border: none; 
+border: 2px solid #000000;
+}
+#fallanlegen:hover,#datainputs:hover,#diagnos:hover,#messung:hover,#datatransport:hover,#anlegen:hover,#qrcode:hover,#eingabe:hover,#messungstaste:hover,#micro:hover,#uploade:hover{
+background-color:#aaffff;
+}
+#input1,#input2,#input3,#spinBox,#pdvorname,#pd_name,#pd_geb,#pd_krank,#pd_ange{
+background-color:#ffffff;
+border: 2px solid #cccccc;
+border-radius: 8px;
+ padding: 10px 20px;
+}
+#input1:hover,#input2:hover,#input3:hover,#spinBox:hover{
+background-color:#aaffff;
+}
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <widget class="QFrame" name="upline">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>821</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QPushButton" name="fallanlegen">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>10</y>
+       <width>111</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="QSS/resources.qrc">
+       <normaloff>:/icons/Icons/005-user.png</normaloff>:/icons/Icons/005-user.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>70</width>
+       <height>70</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="datainputs">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>10</y>
+       <width>81</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="QSS/resources.qrc">
+       <normaloff>:/icons/Icons/002-medical-notes-symbol-of-a-list-paper-on-a-clipboard.png</normaloff>:/icons/Icons/002-medical-notes-symbol-of-a-list-paper-on-a-clipboard.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>75</width>
+       <height>75</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="messung">
+     <property name="geometry">
+      <rect>
+       <x>380</x>
+       <y>10</y>
+       <width>91</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="QSS/resources.qrc">
+       <normaloff>:/icons/Icons/001-tray.png</normaloff>:/icons/Icons/001-tray.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>75</width>
+       <height>75</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="diagnos">
+     <property name="geometry">
+      <rect>
+       <x>530</x>
+       <y>10</y>
+       <width>81</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="QSS/resources.qrc">
+       <normaloff>:/icons/Icons/009-doctor.png</normaloff>:/icons/Icons/009-doctor.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>75</width>
+       <height>75</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="datatransport">
+     <property name="geometry">
+      <rect>
+       <x>680</x>
+       <y>10</y>
+       <width>91</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="QSS/resources.qrc">
+       <normaloff>:/icons/Icons/003-upload.png</normaloff>:/icons/Icons/003-upload.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>65</width>
+       <height>65</height>
+      </size>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="mainframe">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>90</y>
+      <width>811</width>
+      <height>501</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QCustomStackedWidgest" name="stackedWidget">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>811</width>
+       <height>501</height>
+      </rect>
+     </property>
+     <property name="currentIndex">
+      <number>4</number>
+     </property>
+     <widget class="QWidget" name="page1">
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>171</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600; color:#8b8b8b;&quot;&gt;Notfall anlegen:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="anlegen">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>80</y>
+         <width>131</width>
+         <height>111</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="QSS/resources.qrc">
+         <normaloff>:/icons/Icons/007-group.png</normaloff>:/icons/Icons/007-group.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>75</width>
+         <height>75</height>
+        </size>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="input3">
+       <property name="geometry">
+        <rect>
+         <x>290</x>
+         <y>200</y>
+         <width>181</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="placeholderText">
+        <string>Beschreibung</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="input1">
+       <property name="geometry">
+        <rect>
+         <x>290</x>
+         <y>100</y>
+         <width>171</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="placeholderText">
+        <string>Ort</string>
+       </property>
+      </widget>
+      <widget class="QSpinBox" name="spinBox">
+       <property name="geometry">
+        <rect>
+         <x>290</x>
+         <y>150</y>
+         <width>171</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="specialValueText">
+        <string>Anzahl</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page2">
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>271</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600; color:#969696;&quot;&gt;Patientendaten erfassen:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="qrcode">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>80</y>
+         <width>101</width>
+         <height>91</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="QSS/resources.qrc">
+         <normaloff>:/icons/Icons/camera_disabled.png</normaloff>:/icons/Icons/camera_disabled.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>70</width>
+         <height>70</height>
+        </size>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="eingabe">
+       <property name="geometry">
+        <rect>
+         <x>270</x>
+         <y>80</y>
+         <width>111</width>
+         <height>81</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="QSS/resources.qrc">
+         <normaloff>:/icons/Icons/edit-3_disabled.png</normaloff>:/icons/Icons/edit-3_disabled.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>70</width>
+         <height>70</height>
+        </size>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="pdvorname">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>200</y>
+         <width>141</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="placeholderText">
+        <string>Vorname</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="pd_name">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>250</y>
+         <width>141</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="placeholderText">
+        <string>Name</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="pd_geb">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>300</y>
+         <width>141</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="placeholderText">
+        <string>Geb.datum</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="pd_krank">
+       <property name="geometry">
+        <rect>
+         <x>240</x>
+         <y>200</y>
+         <width>131</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="placeholderText">
+        <string>Telefon</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="pd_ange">
+       <property name="geometry">
+        <rect>
+         <x>240</x>
+         <y>250</y>
+         <width>141</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="placeholderText">
+        <string>Angehörige</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page3">
+      <widget class="QLabel" name="label_3">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>181</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600; color:#9c9c9c;&quot;&gt;Messungen:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="messungstaste">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>80</y>
+         <width>181</width>
+         <height>111</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="QSS/resources.qrc">
+         <normaloff>:/icons/Icons/001-cardiogram.png</normaloff>:/icons/Icons/001-cardiogram.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>100</width>
+         <height>100</height>
+        </size>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page4">
+      <widget class="QLabel" name="label_4">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>0</y>
+         <width>311</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:600; color:#7a7a7a;&quot;&gt;Einschätzung des Notarztes:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QPlainTextEdit" name="plainTextEdit">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>170</y>
+         <width>591</width>
+         <height>271</height>
+        </rect>
+       </property>
+       <property name="plainText">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="micro">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>50</y>
+         <width>181</width>
+         <height>101</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="QSS/resources.qrc">
+         <normaloff>:/icons/Icons/mic_focus.png</normaloff>:/icons/Icons/mic_focus.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>80</width>
+         <height>80</height>
+        </size>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page5">
+      <widget class="QLabel" name="label_5">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>581</width>
+         <height>81</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600; color:#7e7e7e;&quot;&gt;Daten mit H17 an das zuständige Krankenhaus übertragen:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="uploade">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>130</y>
+         <width>191</width>
+         <height>91</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="QSS/resources.qrc">
+         <normaloff>:/icons/Icons/008-upload-1.png</normaloff>:/icons/Icons/008-upload-1.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>80</width>
+         <height>80</height>
+        </size>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QCustomStackedWidgest</class>
+   <extends>QStackedWidget</extends>
+   <header location="global">Custom_Widgets.Widgets.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="QSS/resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
